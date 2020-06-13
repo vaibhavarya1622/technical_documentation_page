@@ -1,0 +1,109 @@
+/*general style sheet*/
+html {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+	font-size: 10px;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+body {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+		'Helvetica Neue', sans-serif;
+	letter-spacing: 1px;
+	word-spacing: 2px;
+	margin-bottom: 1rem;
+}
+
+header {
+	font-size: 2.8rem;
+	padding: 1rem;
+}
+
+p {
+	font-size: 1.8rem;
+	padding: 1rem;
+	font-weight: lighter;
+}
+
+p + ul {
+	font-weight: lighter;
+	font-size: 1.8rem;
+	list-style: circle;
+}
+
+code {
+	line-height: 2;
+	font-size: 1.8rem;
+	font-family: monospace;
+	background-color: rgb(238, 234, 234);
+	padding: 1rem;
+	margin: 1rem;
+}
+
+/*page layout*/
+nav {
+	position: fixed;
+	top: 0;
+	left: 0px;
+	height: 100vh;
+	min-width: 29rem;
+	width: 30rem;
+	border: 3px solid grey;
+}
+
+main {
+	position: absolute;
+	margin-left: 31rem;
+	background-color: ivory;
+}
+
+/*nav element*/
+nav > header {
+	background-color: thistle;
+	width: inherit;
+	position: fixed;
+	top: 0;
+}
+nav > ul {
+	width: inherit;
+	margin-top: 10vh;
+	height: 90vh;
+	overflow-y: scroll;
+	padding-left: 0;
+	font-size: 1.8rem;
+}
+
+nav ul > li {
+	padding: 1.2em 3px;
+	list-style: none;
+	color: black;
+}
+nav ul li:nth-child(even) {
+	background-color: rgb(248, 229, 236);
+}
+nav ul li:nth-child(odd) {
+	background-color: rgb(255, 208, 215);
+}
+nav ul li a {
+	text-decoration: none;
+}
+/*media query*/
+@media (max-width: 520px) {
+	nav {
+		overflow-y: scroll;
+		width: 100%;
+		height: 30vh;
+	}
+	main {
+		overflow-y: scroll;
+		margin-left: 0px;
+		top: 31vh;
+		z-index: -1;
+		height: 70vh;
+	}
+}
